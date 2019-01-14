@@ -33,7 +33,7 @@
           background-color: #f44336;
         }
         .cancelbtn , .signupbtn{
-          width: 50%;
+
           float:left;
         }
         .clearfix::after {
@@ -46,12 +46,48 @@
           width: 100%;
         }
       }
+  ul {
+        list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
       </style>
   </head>
-  <body>
-    <h1 align="center">SIGN UP<h1>
-    <form  style="border:1px solid #ccc">
-        <div class="container" align="center">
+  <body vlink="red">
+    <header>
+      <ul>
+        <h1 align="center" style="color:white">Helping Hands</h1>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      </ul>
+    <p align="Center">
+    <img src="/home/wtl-n1/Downloads/images.png" height="180" width="150">
+    </p>
+    <h3 align="center">Sign Up</h3>
+  </header>
+    <p align="left">
+    <form  style=" solid #ccc">
+        <div  align="center">
           <hr>
           <table>
           <tr>
@@ -59,7 +95,7 @@
             <label for="email"><b>Email</b></label>
           </td>
           <td>
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="text" placeholder="Enter Email" name="email" required >
           </td>
           </tr>
           <tr>
@@ -94,13 +130,22 @@
                     <input type="number" placeholder="Number" name="number" required>
             </td>
           </tr>
+          <tr>
+            <div class="clearfix">
+              <td align="right">    <button type="button" class="cancelbtn">Cancel</button> </td>
+              <td>    <button type="submit" class="signupbtn">Sign Up</button> </td>
+            </div>
+          </tr>
           </table>
-
-          <div class="clearfix">
-              <button type="button" class="cancelbtn">Cancel</button>
-              <button type="submit" class="signupbtn">Sign Up</button>
-          </div>
-        </div>
     </form>
+    </p>
+    <footer>
+        <p>Posted by: Helping Hands Initiative</p>
+        <p>Contact information: <a href="#" >helpinghands@example.com</a>
+        </p>
+    </footer>
+
+    <p><strong>Note:</strong> The webpage is not supported in Internet Explorer 8 and earlier versions.</p>
+
   </body>
 </html>
