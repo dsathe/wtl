@@ -89,33 +89,38 @@
     <h3 align="center">Sign Up</h3>
   </header>
 
-  <script>
-      function myfunction()
+  <script type="text/javascript">
+      function myfunc()
       {
 
-        var  x=document.getElementsById('psw');
-        var y=document.getElementById('re-psw');
-        if(!x.localCompare(y))
+        var  x=document.forms["form1"]["psw"].value;
+        var y=document.forms["form1"]["re-psw"].value;
+        if(!(x==y))
         {
           alert("Password not entered correctly !!!");
         }
-        var mob =document.getElementById('number');
+        var mob =document.forms["form1"]["number"].value;
         if(mob.length!=10)
         {
           alert("Please enter the valid mobile number !!!");
-        }/*
-        var mail=document..getElementById('email');
-        if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)))
+        }
+        var mail=document.forms["form1"]["email"].value;
+        var n1=mail.includes("@");
+        var n2=mail.includes(".");
+        var atpos=mail.indexof(".");
+        var last=mail.length;
+        if((last-atpos<2) && (last-atpos)>4)
+        if(n1!=true || n2!=true)
         {
-            alert("You have entered an invalid email address!");
-        }*/
-    }
+            alert("Please enter the valid Email-id !!!");
+        }
+      }
 
   </script>
 
 
   <p align="left">
-    <form class="container" method="post">
+    <form class="container" name="form1" method="post" >
         <div  align="center">
           <hr>
           <table>
@@ -124,7 +129,7 @@
             <label for="email"><b>Email</b></label>
           </td>
           <td>
-            <input type="text" placeholder="Enter Email" id="email" required >
+            <input type="text" placeholder="Enter Email" name="email" required >
           </td>
           </tr>
           <tr>
@@ -156,7 +161,7 @@
                   <label for="Mobile">Mobile No.</label>
             </td>
             <td>
-                    <input type="number" placeholder="Number" id="number" required>
+                    <input type="text" placeholder="Number" id="number" required>
             </td>
           </tr>
           <tr>
@@ -165,7 +170,7 @@
           </tr>
           </table>
           <br>
-         <button type="submit" class="signupbtn" onclick="myfunction()">Sign Up</button>
+         <button type="submit" class="signupbtn" onclick="return myfunc()">Sign Up</button>
          <br>
          <br>
          <br>
